@@ -218,7 +218,23 @@ span {
     background-blend-mode: multiply;
     position: relative;
 }
+.about-imgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 18vw;
+}
 
+.about-imgs img {
+    width: 32vw;
+    border: solid 2px var(--lowermain-color);
+    border-radius: 6%;
+    box-shadow: -10px -10px 40px var(--lowermain-color);
+    background-image: linear-gradient(to bottom right, var(--main-color), var(--bg-color));
+    background-blend-mode: multiply;
+    position: relative;
+}
 .heading {
     text-align: center;
     font-size: 4.5rem;
@@ -238,7 +254,23 @@ span {
     font-size: 1.2rem;
     margin: 2rem 0 3rem;
     text-align: justify;
+    text-decoration: none;
+
 }
+.about-courses span {
+    color: var(--main-color);
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
+
+} 
+
+.about-courses a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
 
 /* End of About Section */  
 /* Services Section */ 
