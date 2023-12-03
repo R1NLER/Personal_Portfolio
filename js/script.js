@@ -47,7 +47,7 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 /* Animated Text */
 const typed = new Typed('.multiple-text', {
-    strings: ['Técnico Informático', 'Desarrollador Web', 'SysAdmin'],
+    strings: ['Técnico Informático', 'Desarrollador Web', 'SysAdmin', 'Programador'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,

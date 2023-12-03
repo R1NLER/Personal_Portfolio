@@ -308,6 +308,8 @@ span {
     color: var(--main-color);
 }
 
+
+
 .services-box h3 {
     font-size: 2.3rem;
 }
@@ -316,6 +318,76 @@ span {
     font-size: 1.3rem;
     margin: 1rem 0 3rem;
 }
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.project-item {
+    flex-basis: calc(50% - 20px);
+    text-align: center;
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    border: var(--main-color); 
+    border-radius: 4px; 
+    margin-bottom: 10px;
+}
+
+.project-item a {
+    display: block;
+    color: var(--main-color); 
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+.project-item a:hover {
+    color: var(--main-color); 
+}
+
+.disclaimer {
+    color: var(--main-color);
+    font-size: 0.9em; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    text-align: center; 
+    line-height: 1.4; 
+    border-top: 1px solid var(--main-color); 
+    border-bottom: 1px solid var(--main-color); 
+    padding: 10px; 
+    width: 100%;
+}
+
+.disclaimer a {
+    color: inherit; 
+    text-decoration: underline; 
+    font-weight: normal; 
+}
+
+.disclaimer a:hover,
+.disclaimer a:active,
+.disclaimer a:focus {
+    text-decoration: none; 
+}
+
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.services-box {
+    flex: 0 1 calc(50% - 2rem); /* Para que haya dos tarjetas por fila por defecto */
+    margin-bottom: 2rem;
+}
+
 
 /* End of Services Section */ 
 /*Portfolio Section */
