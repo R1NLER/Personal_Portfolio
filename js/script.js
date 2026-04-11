@@ -55,10 +55,23 @@ const projectTabs = document.querySelectorAll('.portfolio-tab');
 const projectPanels = document.querySelectorAll('.project-panel');
 const projectControls = document.querySelectorAll('.portfolio-control');
 const progressBar = document.querySelector('.portfolio-progress-bar');
+const projectCurrent = document.querySelector('#project-current');
+const projectTotal = document.querySelector('#project-total');
+const portfolioShell = document.querySelector('.portfolio-shell');
 
 if (projectTabs.length && projectPanels.length) {
     const projectOrder = Array.from(projectTabs).map((tab) => tab.dataset.project);
+    const projectAccents = {
+        turboiber: '#d9ff00',
+        keykymo: '#8bed45',
+        imasteq: '#c5ff4a',
+        orvalle: '#b7f03b',
+        webprojects: '#e5ff52'
+    };
     let currentProjectIndex = 0;
+    if (projectTotal) {
+        projectTotal.textContent = String(projectOrder.length).padStart(2, '0');
+    }
 
     const activateProject = (projectId) => {
         projectTabs.forEach((tab) => {
@@ -76,6 +89,14 @@ if (projectTabs.length && projectPanels.length) {
         if (progressBar) {
             progressBar.style.width = `${100 / projectOrder.length}%`;
             progressBar.style.transform = `translateX(${currentProjectIndex * 100}%)`;
+        }
+
+        if (projectCurrent) {
+            projectCurrent.textContent = String(currentProjectIndex + 1).padStart(2, '0');
+        }
+
+        if (portfolioShell) {
+            portfolioShell.style.setProperty('--accent', projectAccents[projectId] || '#d9ff00');
         }
     };
 
