@@ -406,88 +406,98 @@ span {
     text-align: center;
 }
 
-.portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2.5rem;
-}
-.portfolio-container1 {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    align-items: center;
-    gap: 2.5rem;
-    margin-top: 2.5rem;
+.portfolio-shell {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(31, 36, 45, 0.65);
+    border: 1px solid rgba(217, 255, 0, 0.2);
+    border-radius: 1.8rem;
+    padding: 2rem;
 }
 
-.portfolio-container .portfolio-box {
-    position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
-    overflow: hidden;
+.portfolio-nav {
     display: flex;
-}
-.portfolio-container1 .portfolio-box {
-    position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
-    overflow: hidden;
-    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.8rem;
 }
 
-.portfolio-box img {
-    width: 100%;
-    transition: .5s ease;
-}
-
-.portfolio-box:hover img {
-    transform: scale(1.1)
-}
-
-.portfolio-box .portfolio-layer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 4rem;
-    transform: translateY(100%);
-    transition: .5s ease;
-}
-
-.portfolio-box:hover .portfolio-layer {
-    transform: translateY(0);
-}
-
-.portfolio-layer h4 {
-    font-size: 3rem;
+.portfolio-tab {
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid rgba(217, 255, 0, 0.4);
+    background: transparent;
     color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .25s ease;
 }
 
-.portfolio-layer p {
-    font-size: 1.6rem;
-    margin: .3rem 0 1rem;
-    color: var(--blacktext);
+.portfolio-tab:hover,
+.portfolio-tab.active {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 1rem rgba(217, 255, 0, 0.45);
 }
 
-.portfolio-layer a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 5rem;
-    height: 5rem;
+.project-panel {
+    display: none;
     background: var(--bg-color);
-    border-radius: 50%;
+    border-radius: 1.4rem;
+    padding: 2rem;
+    border: 1px solid rgba(217, 255, 0, 0.2);
 }
 
-.portfolio-layer a ion-icon {
+.project-panel.active {
+    display: block;
+}
+
+.project-panel h3 {
     font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project-panel p {
+    margin: 0 0 1rem;
+    text-align: left;
+}
+
+.project-panel ul {
+    margin: 1rem 0 2rem 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.project-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .8rem;
+}
+
+.project-links a {
+    color: var(--main-color);
+    font-size: 1.05rem;
+}
+
+.portfolio-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: .8rem;
+    margin-top: 1.2rem;
+}
+
+.portfolio-control {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid rgba(217, 255, 0, 0.35);
+    border-radius: 999px;
+    padding: .7rem 1.2rem;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.portfolio-control:hover {
+    border-color: var(--main-color);
     color: var(--main-color);
 }
 
@@ -604,8 +614,14 @@ span {
     .portfolio h2 {
         margin-bottom: 3rem;
     }
-    .portfolio-container {
-        grid-template-columns:repeat(1, 1fr)
+    .portfolio-shell {
+        padding: 1.4rem;
+    }
+    .project-links {
+        grid-template-columns: 1fr;
+    }
+    .portfolio-controls {
+        justify-content: center;
     }
     .btn {
         display: block;
@@ -639,12 +655,6 @@ span {
       .social-media a {
         margin: 1rem;
       }
-}
-
-@media (max-width: 617px) {
-    .portfolio-container {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (max-width: 450px) {

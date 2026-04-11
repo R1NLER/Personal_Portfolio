@@ -46,9 +46,46 @@ ScrollReveal({
 });
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-shell', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+
+/* Portfolio Tabs */
+const projectTabs = document.querySelectorAll('.portfolio-tab');
+const projectPanels = document.querySelectorAll('.project-panel');
+const projectControls = document.querySelectorAll('.portfolio-control');
+
+if (projectTabs.length && projectPanels.length) {
+    const projectOrder = Array.from(projectTabs).map((tab) => tab.dataset.project);
+    let currentProjectIndex = 0;
+
+    const activateProject = (projectId) => {
+        projectTabs.forEach((tab) => {
+            const isActive = tab.dataset.project === projectId;
+            tab.classList.toggle('active', isActive);
+            tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        projectPanels.forEach((panel) => {
+            panel.classList.toggle('active', panel.id === projectId);
+        });
+    };
+
+    projectTabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            currentProjectIndex = index;
+            activateProject(tab.dataset.project);
+        });
+    });
+
+    projectControls.forEach((button) => {
+        button.addEventListener('click', () => {
+            const direction = button.dataset.direction === 'next' ? 1 : -1;
+            currentProjectIndex = (currentProjectIndex + direction + projectOrder.length) % projectOrder.length;
+            activateProject(projectOrder[currentProjectIndex]);
+        });
+    });
+}
 
 /* Animated Text */
 const typed = new Typed('.multiple-text', {
