@@ -1,55 +1,48 @@
-/* Toggle Icon Navbar */
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
+const menuButton = document.querySelector('#menu-icon');
+const navbar = document.querySelector('#navbar');
+const navLinks = document.querySelectorAll('.navbar a');
+const sections = document.querySelectorAll('main section[id]');
+const header = document.querySelector('.header');
+const yearNode = document.querySelector('#current-year');
+
+if (yearNode) {
+  yearNode.textContent = new Date().getFullYear();
+}
+
+if (menuButton && navbar) {
+  menuButton.addEventListener('click', () => {
+    const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!expanded));
     navbar.classList.toggle('active');
+  });
+}
+
+const setActiveLink = () => {
+  const scrollPosition = window.scrollY + 180;
+
+  sections.forEach((section) => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute('id');
+
+    if (scrollPosition >= top && scrollPosition < top + height) {
+      navLinks.forEach((link) => link.classList.remove('active'));
+      const active = document.querySelector(`.navbar a[href="#${id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+
+  if (header) {
+    header.classList.toggle('sticky', window.scrollY > 24);
+  }
 };
 
-/* Scroll */
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+window.addEventListener('scroll', setActiveLink);
+window.addEventListener('load', setActiveLink);
 
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
-        };
-    });
-    /* Navbar */
-    let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 100);
-
-    /* Remove Navbar Onclick */
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove ('active');
-};
-
-/* Scroll Reveal */
-ScrollReveal({
-    reset: true,
-    distance: '80px',
-    duration: 2000,
-    delay: 200
-});
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
-
-/* Animated Text */
-const typed = new Typed('.multiple-text', {
-    strings: ['Técnico Informático', 'Desarrollador Web', 'SysAdmin', 'Programador'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    if (navbar) navbar.classList.remove('active');
+    if (menuButton) menuButton.setAttribute('aria-expanded', 'false');
+  });
 });
