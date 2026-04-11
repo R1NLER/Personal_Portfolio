@@ -1,176 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gonzalo Victoria de Lecea Ortíz Portfolio</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-        <link rel="icon" type="image/svg+xml" href="media/images/sitelogo.svg">
-    </head>
-    <body>
-        <!--Header-->
-        <header class="header">
-            <a href="#" class="logo">Portfolio</a>
-            <i class='bx bx-menu'id="menu-icon"></i>
-            <nav class="navbar">
-                <a href="#home" class="active">Inicio</a>
-                <a href="#about">Sobre Mi</a>
-                <a href="#services">Conocimientos</a>
-                <a href="#portfolio">Trabajos</a>
-                <a href="mailto:gonzalovictoriaortiz@gmail.com">Contacto</a>
-            </nav>
-        </header>
-        <!--Home-->
-        <section class="home" id="home">
-            <div class="home-content">
-                <h3>Soy</h3>
-                <h1>Gonzalo Victoria</h1>
-                <h3>Y soy <span class="multiple-text"></span></h3>
-                <p>Bienvenido a mi Portfolio personal en el que guardo mis experiencias y proyectos laborales. <span>Esta web siempre está en contínuo desarrollo al igual que yo.</span> Te animo a volver a visitarla pronto, ¡seguro que encuentras algo nuevo!</p>
-                <div class="social-media">
-                    <a href="https://www.linkedin.com/in/gonzalo-victoria-de-lecea-ort%C3%ADz-778355219/"><i class='bx bxl-linkedin' ></i></a>
-                    <a href="https://github.com/R1NLER"><i class='bx bxl-github'></i></a>
-                    <a href="mailto:gonzalovictoriaortiz@gmail.com"><i class='bx bxl-gmail'></i></a>
-                </div>
-                <a href="media/docs/CV_2023_WEB.pdf" class="btn" download="">Descargar CV</a>
-            </div>
-            
-        </section>
-        <!--About-->
-        <section class="about" id="about">
-            
-            <div class="about-content">
-                <h2 class="heading">Sobre <span>Mi</span></h2>
-                
-                <p>Soy un apasionado de la informática desde siempre, <span>autodidacta</span> y curioso por la tecnología y su funcionamiento. Actualmente acabo de terminar el grado de Técnico de Sistemas Microinformáticos y Redes y actualmente estoy cursando el grado superior en Desarollo de Aplicaciones Multiplataforma. <span>Compagino mis estudios trabajando como SysAdmin</span>, entre mis labores está el mantenimiento de servidores, equipos cliente y otros derivados. También trabajo por encargos directos de clientes ya sea en desarollo web o consultas.</p>
-                <a href="about.html" class="btn">Saber más</a>
-            </div>
-        </section>
-        <!--Services-->
-        <section class="services" id="services">
-        <h2 class="heading">Mis <span>Conocimientos</span></h2>
-        <div class="services-container">
-            <div class="services-box">
-                <i class='bx bx-code-alt' ></i>
-                <ion-icon name="logo-html5"></ion-icon>
-                <ion-icon name="logo-css3"></ion-icon>
-                <ion-icon name="logo-javascript"></ion-icon>
-                <ion-icon name="logo-python"></ion-icon>
-                <ion-icon name="logo-github"></ion-icon>
-                <ion-icon name="logo-wordpress"></ion-icon>
-                <h3>Desarrollo Web</h3>
-                <p>Tengo conocimientos en la creación de sitios web, algunos lenguajes de programación y aplicaciones</p>
-                <a href="webdevelopment.html" class="btn">Saber más</a>
-            </div>
-            <div class="services-box">
-                <ion-icon name="logo-apple"></ion-icon>
-                <ion-icon name="logo-microsoft"></ion-icon>
-                <ion-icon name="logo-tux"></ion-icon>
-                <ion-icon name="logo-docker"></ion-icon>
-                <ion-icon name="logo-chrome"></ion-icon>
-                <h3>SysAdmin</h3>
-                <p>Experiencia diversa en administración de sistemas operativos, incluyendo Windows, macOS y Linux</p>
-                <a href="sysadmin.html" class="btn">Saber más</a>
-            </div>
-            <div class="services-box">
-                <i class='bx bxs-paint'></i>
-                <ion-icon name="images-outline"></ion-icon>
-                <ion-icon name="logo-youtube"></ion-icon>
-                <h3>Multimedia</h3>
-                <p>También tengo experiencia en la creación de contenido multimedia, edición de fotografía y vídeo</p>
-                <a href="404.html" class="btn">Saber más</a>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gonzalo Victoria | SysAdmin & Web Developer</title>
+    <meta
+      name="description"
+      content="Portfolio profesional de Gonzalo Victoria: SysAdmin y desarrollador web con experiencia real en soporte, infraestructura y proyectos para clientes."
+    />
+    <link rel="icon" type="image/svg+xml" href="media/images/sitelogo.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header" id="top">
+      <a href="#home" class="logo">Gonzalo Victoria</a>
+      <button class="menu-button" id="menu-icon" aria-label="Abrir menú">
+        <i class="bx bx-menu"></i>
+      </button>
+      <nav class="navbar">
+        <a href="#home" class="active">Inicio</a>
+        <a href="#propuesta">Propuesta de valor</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-text">
+          <p class="eyebrow">SysAdmin · Desarrollo Web · Soporte IT</p>
+          <h1>
+            Ayudo a empresas a tener sistemas estables y webs que también generan confianza.
+          </h1>
+          <p class="hero-description">
+            Soy Gonzalo Victoria. Combino experiencia en administración de sistemas, soporte técnico y desarrollo web para resolver problemas reales con foco en continuidad, claridad y resultados.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="mailto:gonzalovictoriaortiz@gmail.com">Hablemos</a>
+            <a class="btn btn-secondary" href="media/docs/CV_2023_WEB.pdf" download>Descargar CV</a>
+          </div>
+          <div class="social-media">
+            <a href="https://www.linkedin.com/in/gonzalo-victoria-de-lecea-ort%C3%ADz-778355219/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://github.com/R1NLER" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+            <a href="mailto:gonzalovictoriaortiz@gmail.com" aria-label="Email"><i class="bx bxl-gmail"></i></a>
+          </div>
         </div>
-        </section>
-        <!--Portfolio-->
-        <section class="portfolio" id="portfolio">
-            <h2 class="heading">Mis <span>Trabajos</span></h2>
-            <p>Esto es una recopilación de mis trabajos para diferentes empresas</p>
-            <div class="portfolio-container">
-                <div class="portfolio-box">
-                    <img src="media/images/sysadmin.jpg" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Turboiber</h4>
-                        <p>SysAdmin & Software developer</p>
-                        <a href="https://turboiber.com" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
-                    </div>
-                </div>
-                <div class="portfolio-box">
-                    <img src="media/images/cloud.jpg" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Keykumo</h4>
-                        <p>Cloud Services</p>
-                        <a href="https://keykumo.com" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
-                    </div>
-                </div>
-                <div class="portfolio-box">
-                    <img src="media/images/it.jpg" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Imasteq</h4>
-                        <p>Consultoría y soporte</p>
-                        <a href="https://intranet.imasteq.com/public/ticket/index.php" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
-                    </div>
-                </div>
-                <div class="portfolio-box">
-                    <img src="media/images/orvalle1.jpg" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Colegio Orvalle</h4>
-                        <p>Administración de sistemas y soporte</p>
-                        <a href="https://www.orvalle.es/" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
-                    </div>
-                </div>
-                <div class="portfolio-box">
-                    <img src="media/images/arch.jpg" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Diseño Web</h4>
-                        <p>Web de estudio de arquitectura</p>
-                        <a href="https://dmoarquitectos.com" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
-                    </div>
-                </div>
-                <div class="portfolio-box">
-                    <img src="media/images/cons.jpg" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Diseño Web</h4>
-                        <p>Web de empresa de construcción</p>
-                        <a href="https://8agsl.com" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
-                    </div>
-                </div>
-                <div class="portfolio-box">
-                    <img src="media/images/liga.png" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Diseño Web</h4>
-                        <p>Web deportiva</p>
-                        <a href="https://ligadeportivafp.com" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
-                    </div>
-                </div>
-                <div class="portfolio-box">
-                    <img src="media/images/nostrumcorp.jpeg" alt="">
-                    <div class="portfolio-layer">
-                        <h4>Diseño Web</h4>
-                        <p>Empresa de Interim Management</p>
-                        <a href="https://nostrumcorp.com" target="_blank"><ion-icon name="link-outline"></ion-icon></a>
-                    </div>
-                </div>
+
+        <aside class="hero-card" id="propuesta">
+          <h2>¿Qué te aporto desde el primer día?</h2>
+          <ul>
+            <li>✅ Diagnóstico técnico claro y priorización de incidencias.</li>
+            <li>✅ Soporte y administración de entornos Windows, Linux y cloud.</li>
+            <li>✅ Desarrollo web práctico para negocio, no solo “bonito”.</li>
+            <li>✅ Comunicación directa con perfil técnico + orientación cliente.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="metrics" aria-label="Resumen profesional">
+        <article>
+          <h3>2+ años</h3>
+          <p>Experiencia real en administración de sistemas y soporte.</p>
+        </article>
+        <article>
+          <h3>8 proyectos</h3>
+          <p>Proyectos publicados para empresas de distintos sectores.</p>
+        </article>
+        <article>
+          <h3>Perfil híbrido</h3>
+          <p>Sistemas + web para ejecutar con visión global.</p>
+        </article>
+      </section>
+
+      <section class="expertise" id="experiencia">
+        <h2>Experiencia y especialidades</h2>
+        <p class="section-intro">
+          Mi foco está en mantener operaciones técnicas fiables y traducir necesidades de negocio en soluciones útiles.
+        </p>
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Administración de sistemas</h3>
+            <p>Mantenimiento de servidores, equipos cliente y entornos corporativos. Resolución de incidencias con enfoque preventivo.</p>
+            <p class="tag-list">Linux · Windows · macOS · VMware · Google Workspace · Azure</p>
+          </article>
+          <article class="card">
+            <h3>Redes y soporte IT</h3>
+            <p>Gestión de redes, conectividad y soporte a usuarios. Coordinación con herramientas empresariales y buenas prácticas de seguridad.</p>
+            <p class="tag-list">Fortinet · Cisco · UniFi · VLAN · Soporte L1/L2</p>
+          </article>
+          <article class="card">
+            <h3>Desarrollo web orientado a cliente</h3>
+            <p>Creación y mejora de webs profesionales para transmitir confianza, claridad y propuesta de valor de forma directa.</p>
+            <p class="tag-list">HTML · CSS · JavaScript · WordPress · SEO básico</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="projects" id="proyectos">
+        <div class="section-head">
+          <h2>Proyectos seleccionados</h2>
+          <p>Trabajos reales que muestran mi ejecución en entornos profesionales.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <img src="media/images/sysadmin.jpg" alt="Proyecto Turboiber" />
+            <div>
+              <h3>Turboiber</h3>
+              <p>SysAdmin y desarrollo de software.</p>
+              <a href="https://turboiber.com" target="_blank" rel="noreferrer">Ver proyecto</a>
             </div>
-        </section>
-        <!--Footer-->
-        <footer class="footer">
-            <div class="footer-text">
-                <p>Copyright &copy; 2023</p>
+          </article>
+          <article class="project-card">
+            <img src="media/images/cloud.jpg" alt="Proyecto Keykumo" />
+            <div>
+              <h3>Keykumo</h3>
+              <p>Servicios cloud y soporte técnico.</p>
+              <a href="https://keykumo.com" target="_blank" rel="noreferrer">Ver proyecto</a>
             </div>
-            <div class="footer-iconTop">
-                <a href="#home"><ion-icon name="arrow-up-outline"></ion-icon></a>
+          </article>
+          <article class="project-card">
+            <img src="media/images/orvalle1.jpg" alt="Proyecto Colegio Orvalle" />
+            <div>
+              <h3>Colegio Orvalle</h3>
+              <p>Administración de sistemas y soporte a usuarios.</p>
+              <a href="https://www.orvalle.es/" target="_blank" rel="noreferrer">Ver proyecto</a>
             </div>
-        </footer>
-        <!--js-->
-        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="js/script.js"></script>
-        
-    </body>
+          </article>
+          <article class="project-card">
+            <img src="media/images/arch.jpg" alt="Proyecto DMO Arquitectos" />
+            <div>
+              <h3>DMO Arquitectos</h3>
+              <p>Diseño y desarrollo de web corporativa.</p>
+              <a href="https://dmoarquitectos.com" target="_blank" rel="noreferrer">Ver proyecto</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contacto">
+        <h2>¿Buscas a alguien resolutivo y con visión técnica completa?</h2>
+        <p>Si quieres que revise tu caso o tu infraestructura, escríbeme y te responderé lo antes posible.</p>
+        <a class="btn btn-primary" href="mailto:gonzalovictoriaortiz@gmail.com">Contactar ahora</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-text">Copyright © 2023</p>
+      <a href="#top" class="to-top" aria-label="Volver arriba"><i class="bx bx-up-arrow-alt"></i></a>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
