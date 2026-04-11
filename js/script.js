@@ -46,9 +46,77 @@ ScrollReveal({
 });
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-shell', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+
+/* Portfolio Tabs */
+const projectTabs = document.querySelectorAll('.portfolio-tab');
+const projectPanels = document.querySelectorAll('.project-panel');
+const projectControls = document.querySelectorAll('.portfolio-control');
+const progressBar = document.querySelector('.portfolio-progress-bar');
+const projectCurrent = document.querySelector('#project-current');
+const projectTotal = document.querySelector('#project-total');
+const portfolioShell = document.querySelector('.portfolio-shell');
+
+if (projectTabs.length && projectPanels.length) {
+    const projectOrder = Array.from(projectTabs).map((tab) => tab.dataset.project);
+    const projectAccents = {
+        turboiber: '#d9ff00',
+        keykymo: '#8bed45',
+        imasteq: '#c5ff4a',
+        orvalle: '#b7f03b',
+        webprojects: '#e5ff52'
+    };
+    let currentProjectIndex = 0;
+    if (projectTotal) {
+        projectTotal.textContent = String(projectOrder.length).padStart(2, '0');
+    }
+
+    const activateProject = (projectId) => {
+        projectTabs.forEach((tab) => {
+            const isActive = tab.dataset.project === projectId;
+            tab.classList.toggle('active', isActive);
+            tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        projectPanels.forEach((panel) => {
+            const isActive = panel.id === projectId;
+            panel.classList.toggle('active', isActive);
+            panel.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+        });
+
+        if (progressBar) {
+            progressBar.style.width = `${100 / projectOrder.length}%`;
+            progressBar.style.transform = `translateX(${currentProjectIndex * 100}%)`;
+        }
+
+        if (projectCurrent) {
+            projectCurrent.textContent = String(currentProjectIndex + 1).padStart(2, '0');
+        }
+
+        if (portfolioShell) {
+            portfolioShell.style.setProperty('--accent', projectAccents[projectId] || '#d9ff00');
+        }
+    };
+
+    projectTabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            currentProjectIndex = index;
+            activateProject(tab.dataset.project);
+        });
+    });
+
+    projectControls.forEach((button) => {
+        button.addEventListener('click', () => {
+            const direction = button.dataset.direction === 'next' ? 1 : -1;
+            currentProjectIndex = (currentProjectIndex + direction + projectOrder.length) % projectOrder.length;
+            activateProject(projectOrder[currentProjectIndex]);
+        });
+    });
+
+    activateProject(projectOrder[currentProjectIndex]);
+}
 
 /* Animated Text */
 const typed = new Typed('.multiple-text', {
