@@ -1,55 +1,57 @@
-/* Toggle Icon Navbar */
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-menuIcon.onclick = () => {
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
+
+if (menuIcon && navbar) {
+  menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
-};
+  };
+}
 
-/* Scroll */
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('header nav a[href^="#"]');
+
 window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+  sections.forEach((sec) => {
+    const top = window.scrollY;
+    const offset = sec.offsetTop - 150;
+    const height = sec.offsetHeight;
+    const id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
-        };
-    });
-    /* Navbar */
-    let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 100);
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach((link) => link.classList.remove('active'));
+      const activeLink = document.querySelector(`header nav a[href*="${id}"]`);
+      if (activeLink) activeLink.classList.add('active');
+    }
+  });
 
-    /* Remove Navbar Onclick */
+  const header = document.querySelector('header');
+  if (header) header.classList.toggle('sticky', window.scrollY > 60);
+
+  if (menuIcon && navbar) {
     menuIcon.classList.remove('bx-x');
-    navbar.classList.remove ('active');
+    navbar.classList.remove('active');
+  }
 };
 
-/* Scroll Reveal */
-ScrollReveal({
-    reset: true,
-    distance: '80px',
-    duration: 2000,
-    delay: 200
-});
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+if (typeof ScrollReveal !== 'undefined') {
+  ScrollReveal({
+    distance: '40px',
+    duration: 900,
+    delay: 100,
+    reset: false
+  });
 
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+  ScrollReveal().reveal('.home-content, .heading, .contact p', { origin: 'top' });
+  ScrollReveal().reveal('.hero-metrics, .services-box, .value-card, .portfolio-box', { origin: 'bottom' });
+}
 
-/* Animated Text */
-const typed = new Typed('.multiple-text', {
-    strings: ['Técnico Informático', 'Desarrollador Web', 'SysAdmin', 'Programador'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
+if (typeof Typed !== 'undefined' && document.querySelector('.multiple-text')) {
+  new Typed('.multiple-text', {
+    strings: ['SysAdmin', 'desarrollador web', 'técnico informático'],
+    typeSpeed: 80,
+    backSpeed: 50,
+    backDelay: 1400,
     loop: true
-});
+  });
+}
