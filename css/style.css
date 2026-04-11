@@ -407,12 +407,26 @@ span {
 }
 
 .portfolio-shell {
+    position: relative;
     max-width: 900px;
     margin: 0 auto;
     background: rgba(31, 36, 45, 0.65);
     border: 1px solid rgba(217, 255, 0, 0.2);
     border-radius: 1.8rem;
     padding: 2rem;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+}
+
+.portfolio-glow {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    top: -120px;
+    right: -90px;
+    background: radial-gradient(circle, rgba(217, 255, 0, 0.35) 0%, rgba(217, 255, 0, 0) 65%);
+    pointer-events: none;
 }
 
 .portfolio-nav {
@@ -423,6 +437,8 @@ span {
 }
 
 .portfolio-tab {
+    position: relative;
+    z-index: 1;
     padding: 0.8rem 1.4rem;
     border-radius: 999px;
     border: 1px solid rgba(217, 255, 0, 0.4);
@@ -446,6 +462,7 @@ span {
     border-radius: 1.4rem;
     padding: 2rem;
     border: 1px solid rgba(217, 255, 0, 0.2);
+    animation: panelFade .35s ease;
 }
 
 .project-panel.active {
@@ -466,6 +483,22 @@ span {
     margin: 1rem 0 2rem 1.2rem;
     font-size: 1.1rem;
     line-height: 1.8;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin-bottom: 1.2rem;
+}
+
+.project-tags span {
+    color: var(--text-color);
+    border: 1px solid rgba(217, 255, 0, 0.35);
+    background: rgba(217, 255, 0, 0.08);
+    padding: 0.35rem .75rem;
+    border-radius: 999px;
+    font-size: .9rem;
 }
 
 .project-links {
@@ -499,6 +532,34 @@ span {
 .portfolio-control:hover {
     border-color: var(--main-color);
     color: var(--main-color);
+}
+
+.portfolio-progress {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    margin-top: 1.4rem;
+    overflow: hidden;
+}
+
+.portfolio-progress-bar {
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--lowermain-color), var(--main-color));
+    border-radius: inherit;
+    transition: transform .3s ease;
+}
+
+@keyframes panelFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* End of Portfolio Section */ 
@@ -616,6 +677,9 @@ span {
     }
     .portfolio-shell {
         padding: 1.4rem;
+    }
+    .project-tags span {
+        font-size: .82rem;
     }
     .project-links {
         grid-template-columns: 1fr;

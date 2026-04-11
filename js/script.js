@@ -54,6 +54,7 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 const projectTabs = document.querySelectorAll('.portfolio-tab');
 const projectPanels = document.querySelectorAll('.project-panel');
 const projectControls = document.querySelectorAll('.portfolio-control');
+const progressBar = document.querySelector('.portfolio-progress-bar');
 
 if (projectTabs.length && projectPanels.length) {
     const projectOrder = Array.from(projectTabs).map((tab) => tab.dataset.project);
@@ -67,8 +68,15 @@ if (projectTabs.length && projectPanels.length) {
         });
 
         projectPanels.forEach((panel) => {
-            panel.classList.toggle('active', panel.id === projectId);
+            const isActive = panel.id === projectId;
+            panel.classList.toggle('active', isActive);
+            panel.setAttribute('aria-hidden', isActive ? 'false' : 'true');
         });
+
+        if (progressBar) {
+            progressBar.style.width = `${100 / projectOrder.length}%`;
+            progressBar.style.transform = `translateX(${currentProjectIndex * 100}%)`;
+        }
     };
 
     projectTabs.forEach((tab, index) => {
@@ -85,6 +93,8 @@ if (projectTabs.length && projectPanels.length) {
             activateProject(projectOrder[currentProjectIndex]);
         });
     });
+
+    activateProject(projectOrder[currentProjectIndex]);
 }
 
 /* Animated Text */
