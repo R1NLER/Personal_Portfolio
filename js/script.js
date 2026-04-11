@@ -1,4 +1,9 @@
 /* Toggle Icon Navbar */
+const currentYear = new Date().getFullYear();
+document.querySelectorAll('.footer-text p').forEach((copyright) => {
+    copyright.innerHTML = `Copyright &copy; ${currentYear}`;
+});
+
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 menuIcon.onclick = () => {
