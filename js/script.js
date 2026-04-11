@@ -1,3 +1,9 @@
+/* Copyright Year */
+const currentYearElement = document.querySelector('.current-year');
+if (currentYearElement) {
+    currentYearElement.textContent = new Date().getFullYear();
+}
+
 /* Toggle Icon Navbar */
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
