@@ -120,7 +120,7 @@ if (projectTabs.length && projectPanels.length) {
 
 /* Animated Text */
 const typed = new Typed('.multiple-text', {
-    strings: ['Técnico Informático', 'Desarrollador Web', 'SysAdmin', 'Programador'],
+    strings: ['Administrador de Sistemas', 'Fullstack Developer', 'Cloud & Networking', 'Automatización IT'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
