@@ -13,7 +13,7 @@
     </head>
     <body>
         <header class="header">
-            <a href="#" class="logo">CV Online</a>
+            <a href="#" class="logo">Gonzalo Victoria</a>
             <i class='bx bx-menu' id="menu-icon"></i>
             <nav class="navbar">
                 <a href="#home" class="active">Inicio</a>
@@ -25,21 +25,39 @@
         </header>
 
         <section class="home" id="home">
-            <div class="home-content">
-                <h3>Hola, soy</h3>
-                <h1>Gonzalo Victoria de Lecea Ortíz</h1>
-                <h3><span class="multiple-text"></span></h3>
-                <p>
-                    Profesional IT con experiencia real en administración de sistemas, redes y desarrollo web.
-                    Actualmente trabajo como <span>Administrador de Sistemas y Fullstack Developer</span>,
-                    combinando operación técnica diaria con mejora continua de servicios e infraestructuras.
-                </p>
-                <div class="social-media">
-                    <a href="https://www.linkedin.com/in/gonzalo-victoria-de-lecea-ort%C3%ADz-778355219/"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/R1NLER"><i class='bx bxl-github'></i></a>
-                    <a href="mailto:gonzalovictoriaortiz@gmail.com"><i class='bx bxl-gmail'></i></a>
+            <div class="hero-grid">
+                <div class="home-content">
+                    <p class="eyebrow">Currículum online</p>
+                    <h1>Gonzalo Victoria de Lecea Ortíz</h1>
+                    <h3><span class="multiple-text"></span></h3>
+                    <p>
+                        Perfil técnico con experiencia en operaciones IT, administración de infraestructura y desarrollo
+                        de soluciones web para negocio. Enfoque práctico: <span>estabilidad, seguridad y automatización</span>.
+                    </p>
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/gonzalo-victoria-de-lecea-ort%C3%ADz-778355219/" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/R1NLER" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                        <a href="mailto:gonzalovictoriaortiz@gmail.com" aria-label="Email"><i class='bx bxl-gmail'></i></a>
+                    </div>
+                    <a href="media/docs/CV_2023_WEB.pdf" class="btn" download>Descargar CV en PDF</a>
                 </div>
-                <a href="media/docs/CV_2023_WEB.pdf" class="btn" download>Descargar CV en PDF</a>
+
+                <aside class="hero-card" aria-label="Resumen profesional">
+                    <h2>Resumen rápido</h2>
+                    <ul class="quick-list">
+                        <li><i class='bx bx-briefcase-alt-2'></i><span><strong>+3 años</strong> de experiencia IT profesional.</span></li>
+                        <li><i class='bx bx-server'></i><span>Sistemas Microsoft, VMware, Fortinet y redes empresariales.</span></li>
+                        <li><i class='bx bx-code-alt'></i><span>Automatización con PowerShell, Python y Bash.</span></li>
+                        <li><i class='bx bx-globe'></i><span>Desarrollo web y APIs con WordPress, Angular, PHP Slim.</span></li>
+                    </ul>
+                    <div class="hero-tags">
+                        <span>Active Directory</span>
+                        <span>Azure / M365</span>
+                        <span>VMware ESXi</span>
+                        <span>Fortinet</span>
+                        <span>Unifi / Cisco</span>
+                    </div>
+                </aside>
             </div>
         </section>
 
@@ -47,61 +65,79 @@
             <div class="about-content">
                 <h2 class="heading">Perfil <span>Profesional</span></h2>
                 <p>
-                    Perfil técnico orientado a resultados, con enfoque en estabilidad, seguridad y automatización.
-                    Especializado en entornos Microsoft, virtualización VMware, redes con Fortinet/Cisco/Unifi y
-                    scripting con <span>PowerShell, Python y Bash</span>. También desarrollo soluciones web y APIs
-                    para cubrir necesidades internas de negocio.
+                    Administrador de Sistemas con visión fullstack, acostumbrado a combinar soporte, operación y mejora
+                    continua en entornos reales. Trabajo con dominio local y cloud, seguridad perimetral, virtualización,
+                    copias de seguridad y despliegues web. Me enfoco en aportar soluciones claras, documentadas y medibles.
                 </p>
+
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <strong>Actualidad</strong>
+                        <span>Administrador de Sistemas y Fullstack Developer en Turboiber Elevación.</span>
+                    </div>
+                    <div class="kpi-card">
+                        <strong>Especialidad</strong>
+                        <span>Infraestructura, redes, cloud Microsoft y automatización de tareas IT.</span>
+                    </div>
+                    <div class="kpi-card">
+                        <strong>Valor añadido</strong>
+                        <span>Conecto operación técnica con desarrollo para resolver necesidades de negocio.</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="portfolio" id="portfolio">
             <h2 class="heading">Experiencia <span>Profesional</span></h2>
-            <div class="portfolio-shell">
-                <article class="project-panel active" role="tabpanel">
-                    <h3>TURBOIBER ELEVACIÓN · Administrador de Sistemas | Fullstack Developer</h3>
-                    <p><span>Noviembre 2023 – Actualidad</span> · San Martín de la Vega (Madrid)</p>
+            <div class="portfolio-shell timeline">
+                <article class="timeline-item">
+                    <div class="timeline-head">
+                        <h3>TURBOIBER ELEVACIÓN</h3>
+                        <span>Noviembre 2023 – Actualidad · San Martín de la Vega (Madrid)</span>
+                    </div>
+                    <p class="timeline-role">Administrador de Sistemas | Fullstack Developer</p>
                     <ul>
-                        <li>Administración de dominio local WS2019 con Active Directory.</li>
-                        <li>Gestión de firewall Fortinet, servidores VMware ESXi y backup con Nakivo.</li>
-                        <li>Administración de red (VLAN y WiFi Unifi) y buzones de correo corporativo.</li>
-                        <li>Automatización con scripts en PowerShell, Python y Bash.</li>
-                        <li>Desarrollo y mantenimiento web con Wordpress, Angular y APIs PHP Slim.</li>
-                        <li>Despliegue y gestión MDM Samsung Knox Manage.</li>
+                        <li>Administración de dominio WS2019 con Active Directory y gestión de correo corporativo.</li>
+                        <li>Operación de firewall Fortinet, servidores VMware ESXi, VLAN, WiFi Unifi y backup con Nakivo.</li>
+                        <li>Automatización de tareas con PowerShell, Python y Bash.</li>
+                        <li>Desarrollo y mantenimiento de webs y APIs (WordPress, Angular, PHP Slim).</li>
                     </ul>
                 </article>
 
-                <article class="project-panel active" role="tabpanel">
-                    <h3>KEYKUMO · Administrador de Sistemas Cloud</h3>
-                    <p><span>Julio 2023 – Septiembre 2023</span> · Madrid</p>
+                <article class="timeline-item">
+                    <div class="timeline-head">
+                        <h3>KEYKUMO</h3>
+                        <span>Julio 2023 – Septiembre 2023 · Madrid</span>
+                    </div>
+                    <p class="timeline-role">Administrador de Sistemas Cloud</p>
                     <ul>
-                        <li>Implementación de soluciones en Microsoft Azure y Microsoft 365.</li>
-                        <li>Gestión de dominios y seguridad con Intune y Defender for 365.</li>
-                        <li>Administración de correo en MS365, OneDrive y Dropbox.</li>
-                        <li>Gestión de backup con Veritas Backup Exec y Microsoft Azure.</li>
-                        <li>Mantenimiento de firewall Fortinet, switches Cisco y WiFi Unifi.</li>
-                        <li>Administración de vCenter VMware.</li>
+                        <li>Implementación de soluciones en Azure y Microsoft 365.</li>
+                        <li>Gestión de seguridad con Intune y Defender for 365.</li>
+                        <li>Administración de backup (Veritas Backup Exec + Azure) y soporte de infraestructura de red.</li>
                     </ul>
                 </article>
 
-                <article class="project-panel active" role="tabpanel">
-                    <h3>COLEGIO ORVALLE · Técnico Informático</h3>
-                    <p><span>Septiembre 2022 – Junio 2023</span> · Las Rozas (Madrid)</p>
+                <article class="timeline-item">
+                    <div class="timeline-head">
+                        <h3>COLEGIO ORVALLE</h3>
+                        <span>Septiembre 2022 – Junio 2023 · Las Rozas (Madrid)</span>
+                    </div>
+                    <p class="timeline-role">Técnico Informático</p>
                     <ul>
-                        <li>Mantenimiento del parque informático y resolución de incidencias.</li>
-                        <li>Gestión de dominio Google Workspace y dispositivos Chromebook.</li>
-                        <li>Administración de dominio Windows Server y equipos cliente.</li>
-                        <li>Gestión de firewall Fortinet y red Cisco con WiFi Unifi.</li>
+                        <li>Mantenimiento de equipos e incidencias en entorno educativo.</li>
+                        <li>Gestión de Google Workspace, Chromebooks, dominio Windows Server y red corporativa.</li>
                     </ul>
                 </article>
 
-                <article class="project-panel active" role="tabpanel">
-                    <h3>Proyectos Web Freelance</h3>
-                    <p><span>2015 – 2023</span> · Madrid</p>
+                <article class="timeline-item">
+                    <div class="timeline-head">
+                        <h3>PROYECTOS WEB FREELANCE</h3>
+                        <span>2015 – 2023 · Madrid</span>
+                    </div>
+                    <p class="timeline-role">Desarrollo web por proyecto</p>
                     <ul>
-                        <li>Creación de webs corporativas para DMO Arquitectos y 8AG S.L. (WordPress y HTML).</li>
-                        <li>Desarrollo y administración de la web de Liga Deportiva FP (WordPress, HTML, CSS y Bootstrap).</li>
-                        <li>Gestión de servidor web y mantenimiento técnico en distintas etapas de proyecto.</li>
+                        <li>Creación de sitios para DMO Arquitectos, 8AG S.L. y Liga Deportiva FP.</li>
+                        <li>Stack principal: WordPress, HTML, CSS, Bootstrap y mantenimiento de hosting.</li>
                     </ul>
                 </article>
             </div>
@@ -110,30 +146,29 @@
         <section class="services" id="services">
             <h2 class="heading">Formación y <span>Cursos</span></h2>
             <div class="services-container">
-                <div class="services-box">
+                <article class="services-box text-left">
                     <i class='bx bxs-graduation'></i>
                     <h3>Formación académica</h3>
-                    <ul>
-                        <li><strong>2025</strong> · Desarrollo de Aplicaciones Multiplataforma (DAM), Colegio Retamar. Mención Honor.</li>
-                        <li><strong>2023</strong> · Sistemas Microinformáticos y Redes (SMIR), Colegio Retamar. Mención Honor.</li>
+                    <ul class="clean-list">
+                        <li><strong>2025</strong> · Desarrollo de Aplicaciones Multiplataforma (DAM), Colegio Retamar · Mención Honor.</li>
+                        <li><strong>2023</strong> · Sistemas Microinformáticos y Redes (SMIR), Colegio Retamar · Mención Honor.</li>
                         <li><strong>2013</strong> · Técnico Software Ofimático, Universidad Rey Juan Carlos.</li>
-                        <li><strong>2010</strong> · Educación Secundaria Obligatoria (ESO), Colegio Salesianos Loyola.</li>
+                        <li><strong>2010</strong> · ESO, Colegio Salesianos Loyola.</li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="services-box">
+                <article class="services-box text-left">
                     <i class='bx bx-certification'></i>
-                    <h3>Cursos realizados</h3>
-                    <ul>
-                        <li>LPIC-1: Administrador de Linux (Examen 101).</li>
-                        <li>Docker, Swarm y Kubernetes.</li>
-                        <li>Kubernetes y Docker en AWS.</li>
-                        <li>Python: Programador total.</li>
+                    <h3>Cursos técnicos</h3>
+                    <ul class="clean-list">
+                        <li>LPIC-1 Administrador de Linux (Examen 101).</li>
+                        <li>Docker, Swarm, Kubernetes y despliegue en AWS.</li>
+                        <li>Python (programación aplicada).</li>
                         <li>Hacking Ético y Ciberseguridad.</li>
-                        <li>Desarrollo web completo con HTML5, CSS3, JS, AJAX, PHP y MySQL.</li>
+                        <li>Desarrollo web completo: HTML5, CSS3, JavaScript, AJAX, PHP y MySQL.</li>
                         <li>Fortinet 7: de principiante a experto.</li>
                     </ul>
-                </div>
+                </article>
             </div>
         </section>
 
