@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><rect x="32" y="64" width="448" height="320" rx="32" ry="32" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M304 448l-8-64h-80l-8 64h96z"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 448H144"/><path d="M32 304v48a32.09 32.09 0 0032 32h384a32.09 32.09 0 0032-32v-48zm224 64a16 16 0 1116-16 16 16 0 01-16 16z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Gonzalo Victoria — gv.</title>
+  <rect width="128" height="128" rx="28" fill="#111713"/>
+  <path fill="#f1f3ed" fill-rule="evenodd" d="M51 35h14v48c0 17-10 25-27 25-10 0-19-3-25-8l7-11c4 3 10 5 17 5 9 0 14-4 14-12v-2c-4 4-9 6-15 6-14 0-24-11-24-26s10-26 24-26c7 0 12 3 15 7zm-11 12c-8 0-13 6-13 14s5 14 13 14 13-6 13-14-5-14-13-14z"/>
+  <path fill="#f1f3ed" d="M66 35h15l10 32 10-32h15L99 85H83z"/>
+  <circle cx="112" cy="80" r="7" fill="#dfff00"/>
+</svg>

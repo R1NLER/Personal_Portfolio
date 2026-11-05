@@ -1,222 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gonzalo Victoria de Lecea Ortíz Portfolio</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-        <link rel="icon" type="image/svg+xml" href="media/images/sitelogo.svg">
-    </head>
-    <body>
-        <!--Header-->
-        <header class="header">
-            <a href="#" class="logo">Portfolio</a>
-            <i class='bx bx-menu'id="menu-icon"></i>
-            <nav class="navbar">
-                <a href="#home" class="active">Inicio</a>
-                <a href="#about">Sobre Mi</a>
-                <a href="#services">Conocimientos</a>
-                <a href="#portfolio">Trabajos</a>
-                <a href="mailto:gonzalovictoriaortiz@gmail.com">Contacto</a>
-            </nav>
-        </header>
-        <!--Home-->
-        <section class="home" id="home">
-            <div class="home-content">
-                <h3>Soy</h3>
-                <h1>Gonzalo Victoria</h1>
-                <h3>Y soy <span class="multiple-text"></span></h3>
-                <p>Bienvenido a mi Portfolio personal en el que guardo mis experiencias y proyectos laborales. <span>Esta web siempre está en contínuo desarrollo al igual que yo.</span> Te animo a volver a visitarla pronto, ¡seguro que encuentras algo nuevo!</p>
-                <div class="social-media">
-                    <a href="https://www.linkedin.com/in/gonzalo-victoria-de-lecea-ort%C3%ADz-778355219/"><i class='bx bxl-linkedin' ></i></a>
-                    <a href="https://github.com/R1NLER"><i class='bx bxl-github'></i></a>
-                    <a href="mailto:gonzalovictoriaortiz@gmail.com"><i class='bx bxl-gmail'></i></a>
-                </div>
-                <a href="media/docs/CV-GV2026_WEB.pdf" class="btn" download="">Descargar CV</a>
-            </div>
-            
-        </section>
-        <!--About-->
-        <section class="about" id="about">
-            
-            <div class="about-content">
-                <h2 class="heading">Sobre <span>Mi</span></h2>
-                
-                <p>Soy un apasionado de la informática desde siempre, <span>autodidacta</span> y curioso por la tecnología y su funcionamiento. Actualmente acabo de terminar el grado de Técnico de Sistemas Microinformáticos y Redes y actualmente estoy cursando el grado superior en Desarollo de Aplicaciones Multiplataforma. <span>Compagino mis estudios trabajando como SysAdmin</span>, entre mis labores está el mantenimiento de servidores, equipos cliente y otros derivados. También trabajo por encargos directos de clientes ya sea en desarollo web o consultas.</p>
-                <a href="about.html" class="btn">Saber más</a>
-            </div>
-        </section>
-        <!--Services-->
-        <section class="services" id="services">
-        <h2 class="heading">Mis <span>Conocimientos</span></h2>
-        <div class="services-container">
-            <div class="services-box">
-                <i class='bx bx-code-alt' ></i>
-                <ion-icon name="logo-html5"></ion-icon>
-                <ion-icon name="logo-css3"></ion-icon>
-                <ion-icon name="logo-javascript"></ion-icon>
-                <ion-icon name="logo-python"></ion-icon>
-                <ion-icon name="logo-github"></ion-icon>
-                <ion-icon name="logo-wordpress"></ion-icon>
-                <h3>Desarrollo Web</h3>
-                <p>Tengo conocimientos en la creación de sitios web, algunos lenguajes de programación y aplicaciones</p>
-                <a href="webdevelopment.html" class="btn">Saber más</a>
-            </div>
-            <div class="services-box">
-                <ion-icon name="logo-apple"></ion-icon>
-                <ion-icon name="logo-microsoft"></ion-icon>
-                <ion-icon name="logo-tux"></ion-icon>
-                <ion-icon name="logo-docker"></ion-icon>
-                <ion-icon name="logo-chrome"></ion-icon>
-                <h3>SysAdmin</h3>
-                <p>Experiencia diversa en administración de sistemas operativos, incluyendo Windows, macOS y Linux</p>
-                <a href="sysadmin.html" class="btn">Saber más</a>
-            </div>
-            <div class="services-box">
-                <i class='bx bxs-paint'></i>
-                <ion-icon name="images-outline"></ion-icon>
-                <ion-icon name="logo-youtube"></ion-icon>
-                <h3>Multimedia</h3>
-                <p>También tengo experiencia en la creación de contenido multimedia, edición de fotografía y vídeo</p>
-                <a href="404.html" class="btn">Saber más</a>
-            </div>
-        </div>
-        </section>
-        <!--Portfolio-->
-        <section class="portfolio" id="portfolio">
-            <h2 class="heading">Mis <span>Trabajos</span></h2>
-            <p>En esta sección presento mi experiencia laboral, detallando mi rol, responsabilidades y tecnologías aplicadas en cada proyecto.</p>
-            <div class="portfolio-shell">
-                <div class="portfolio-glow" aria-hidden="true"></div>
-                <div class="portfolio-mesh" aria-hidden="true"></div>
-                <div class="portfolio-headline">
-                    <p class="portfolio-kicker">Project Story Mode</p>
-                    <p class="portfolio-counter"><span id="project-current">01</span> / <span id="project-total">05</span></p>
-                </div>
-                <div class="portfolio-nav" role="tablist" aria-label="Navegación de proyectos">
-                    <button class="portfolio-tab active" data-project="turboiber" role="tab" aria-selected="true">Turboiber</button>
-                    <button class="portfolio-tab" data-project="keykymo" role="tab" aria-selected="false">Keykymo</button>
-                    <button class="portfolio-tab" data-project="imasteq" role="tab" aria-selected="false">Imasteq</button>
-                    <button class="portfolio-tab" data-project="orvalle" role="tab" aria-selected="false">Orvalle</button>
-                    <button class="portfolio-tab" data-project="webprojects" role="tab" aria-selected="false">Diseño web</button>
-                </div>
-                <article class="project-panel active" id="turboiber" role="tabpanel">
-                    <h3>Turboiber</h3>
-                    <p>Puesto actual en el que combino <span>administración de sistemas y redes, helpdesk y desarrollo fullstack</span> de aplicaciones internas y de negocio.</p>
-                    <div class="project-tags">
-                        <span>Angular</span><span>PHP</span><span>Python</span><span>SysAdmin</span><span>Helpdesk</span>
-                    </div>
-                    <ul>
-                        <li>Gestión de infraestructura y red para mantener entornos estables y seguros.</li>
-                        <li>Soporte helpdesk diario, priorización de incidencias y resolución técnica.</li>
-                        <li>Desarrollo fullstack de aplicaciones para optimizar procesos internos.</li>
-                    </ul>
-                    <div class="project-metrics">
-                        <div><strong>3</strong><span>Roles combinados</span></div>
-                        <div><strong>Fullstack</strong><span>Entrega de soluciones</span></div>
-                    </div>
-                    <a href="https://turboiber.com" target="_blank" class="btn">Visitar proyecto</a>
-                </article>
-                <article class="project-panel" id="keykymo" role="tabpanel">
-                    <h3>Keykymo</h3>
-                    <p>Rol de <span>helpdesk y administrador de sistemas</span> gestionando infraestructuras profesionales bajo entornos de dominio en Azure.</p>
-                    <div class="project-tags">
-                        <span>Azure</span><span>Helpdesk</span><span>Sistemas</span><span>Infraestructura</span>
-                    </div>
-                    <ul>
-                        <li>Administración de servicios en dominios de Azure para entornos corporativos.</li>
-                        <li>Atención técnica a usuario final y resolución de incidencias en producción.</li>
-                        <li>Mantenimiento preventivo y mejora operativa de la infraestructura.</li>
-                    </ul>
-                    <div class="project-metrics">
-                        <div><strong>Azure</strong><span>Entorno principal</span></div>
-                        <div><strong>24/7</strong><span>Continuidad operativa</span></div>
-                    </div>
-                    <a href="https://keykumo.com" target="_blank" class="btn">Visitar proyecto</a>
-                </article>
-                <article class="project-panel" id="imasteq" role="tabpanel">
-                    <h3>Imasteq</h3>
-                    <p>Etapa de <span>consultoría y soporte</span> como helpdesk para diferentes empresas, cubriendo necesidades técnicas de distintos sectores.</p>
-                    <div class="project-tags">
-                        <span>Helpdesk</span><span>Consultoría</span><span>Soporte IT</span>
-                    </div>
-                    <ul>
-                        <li>Soporte multicliente y diagnóstico de incidencias en diferentes entornos.</li>
-                        <li>Seguimiento de tickets y comunicación técnica con foco en resolución.</li>
-                        <li>Apoyo consultivo para alinear soluciones IT con necesidades reales.</li>
-                    </ul>
-                    <div class="project-metrics">
-                        <div><strong>B2B</strong><span>Soporte a empresas</span></div>
-                        <div><strong>IT Helpdesk</strong><span>Consultoría aplicada</span></div>
-                    </div>
-                    <a href="https://intranet.imasteq.com/public/ticket/index.php" target="_blank" class="btn">Visitar proyecto</a>
-                </article>
-                <article class="project-panel" id="orvalle" role="tabpanel">
-                    <h3>Colegio Orvalle</h3>
-                    <p>Trabajo como <span>administrador de sistemas, helpdesk y gestor de dominio de Google</span> en un entorno educativo apoyado en Chromebooks.</p>
-                    <div class="project-tags">
-                        <span>Google Workspace</span><span>Chromebooks</span><span>Helpdesk</span><span>Sistemas</span>
-                    </div>
-                    <ul>
-                        <li>Gestión integral de cuentas, correo y políticas del dominio de Google.</li>
-                        <li>Administración del parque de Chromebooks para alumnas y profesorado.</li>
-                        <li>Resolución de incidencias y mantenimiento operativo del ecosistema IT.</li>
-                    </ul>
-                    <div class="project-metrics">
-                        <div><strong>Google</strong><span>Dominio educativo</span></div>
-                        <div><strong>Chromebooks</strong><span>Gestión integral</span></div>
-                    </div>
-                    <a href="https://www.orvalle.es/" target="_blank" class="btn">Visitar proyecto</a>
-                </article>
-                <article class="project-panel" id="webprojects" role="tabpanel">
-                    <h3>Proyectos de diseño web</h3>
-                    <p>Proyectos solicitados directamente por clientes: se realizó propuesta, diseño y evolución iterativa hasta lograr un resultado final con alta satisfacción.</p>
-                    <div class="project-tags">
-                        <span>Diseño web</span><span>Propuesta UX/UI</span><span>Cliente final</span>
-                    </div>
-                    <ul>
-                        <li>Diseño y desarrollo para arquitectura, construcción, deporte e interim management.</li>
-                        <li>Definición conjunta con cliente, ajustes y refinado por fases.</li>
-                        <li>A día de hoy esos sitios ya no se gestionan ni se mantienen por mi parte.</li>
-                    </ul>
-                    <div class="project-metrics">
-                        <div><strong>100%</strong><span>Cliente satisfecho</span></div>
-                        <div><strong>4</strong><span>Sectores distintos</span></div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://dmoarquitectos.com" target="_blank">DMO Arquitectos</a>
-                        <a href="https://8agsl.com" target="_blank">8AG Construcción</a>
-                        <a href="https://ligadeportivafp.com" target="_blank">Liga Deportiva FP</a>
-                        <a href="https://nostrumcorp.com" target="_blank">Nostrumcorp</a>
-                    </div>
-                </article>
-                <div class="portfolio-controls">
-                    <button class="portfolio-control" data-direction="prev" aria-label="Proyecto anterior">← Anterior</button>
-                    <button class="portfolio-control" data-direction="next" aria-label="Proyecto siguiente">Siguiente →</button>
-                </div>
-                <div class="portfolio-progress" aria-hidden="true">
-                    <div class="portfolio-progress-bar"></div>
-                </div>
-            </div>
-        </section>
-        <!--Footer-->
-        <footer class="footer">
-            <div class="footer-text">
-                <p>Copyright &copy; 2023</p>
-            </div>
-            <div class="footer-iconTop">
-                <a href="#home"><ion-icon name="arrow-up-outline"></ion-icon></a>
-            </div>
-        </footer>
-        <!--js-->
-        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="js/script.js"></script>
-        
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio de Gonzalo Victoria: administración de sistemas, soporte IT y desarrollo web.">
+  <title>Gonzalo Victoria — Sistemas & Desarrollo</title>
+  <link rel="icon" type="image/svg+xml" href="media/images/sitelogo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
+  <script src="js/home.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header class="header">
+  <a class="brand" href="#home" aria-label="Gonzalo Victoria, inicio"><span>gv<span class="brand-dot">.</span></span><small>GONZALO VICTORIA<br>PORTFOLIO / 2026</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menú <span>☰</span></button>
+  <nav id="navigation" aria-label="Navegación principal">
+    <a href="#home">Inicio</a><a href="#about">Perfil</a><a href="#services">Conocimientos</a><a href="#portfolio">Experiencia</a><a href="#projects">Proyectos</a><a href="#formacion">Formación</a><div class="language-switch" role="group" aria-label="Idioma / Language"><button type="button" data-language="es" aria-pressed="true">ES</button><span aria-hidden="true">/</span><button type="button" data-language="en" aria-pressed="false" lang="en">EN</button></div><a class="nav-contact" href="#contact">Hablemos <span>↗</span></a>
+  </nav>
+</header>
+<main id="main">
+  <section class="hero wrap" id="home">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="status-dot"></span> SISTEMAS · DESARROLLO · SOPORTE</p>
+      <h1>La tecnología<br>que hace que<br><em>todo funcione.</em></h1>
+      <p class="hero-intro">Soy <strong>Gonzalo Victoria</strong>. Combino administración de sistemas y desarrollo para crear soluciones útiles y mantener la tecnología en marcha.</p>
+      <div class="hero-actions"><a class="button button-primary" href="#portfolio">Explorar experiencia <span>↘</span></a><a class="text-link" href="media/docs/CV-GV2026_WEB.pdf" download>Descargar CV <span>↓</span></a></div>
+    </div>
+    <div class="hero-art" aria-hidden="true"><div class="art-top"><span>GV / DIGITAL WORKSPACE</span><span>01 — 03</span></div><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-core"><span>G</span><span>V<span class="core-dot">.</span></span></div><div class="art-label art-label-one">SYSTEMS <span>✳</span></div><div class="art-label art-label-two">DEVELOPMENT <span>↗</span></div><div class="art-bottom"><span>CONSTRUIR.</span><span>RESOLVER.</span><span>MEJORAR.</span></div></div>
+    <div class="hero-bottom"><span>SCROLL PARA EXPLORAR ↓</span><span>TECNOLOGÍA CON PROPÓSITO</span></div>
+  </section>
+  <section class="intro profile-section" id="about"><div class="wrap profile-layout">
+    <div class="profile-visual"><div class="profile-photo-frame"><img src="media/images/gonzalo-retrato.png" alt="Retrato de Gonzalo Victoria" loading="lazy"><span class="profile-photo-index" aria-hidden="true">01 / GV</span></div><div class="profile-caption"><span>GONZALO VICTORIA</span><span>SISTEMAS &amp; DESARROLLO <span aria-hidden="true">✳</span></span></div></div>
+    <div class="profile-content"><p class="eyebrow section-label">01 / EL PERFIL</p><h2>Curiosidad técnica.<br><em>Enfoque práctico.</em></h2><p class="profile-lead">Me gusta entender cómo funcionan las cosas y encontrar la manera de hacerlas funcionar mejor.</p><p class="profile-description">Mi recorrido une la administración de sistemas, el soporte a usuarios y el desarrollo de aplicaciones. Soy autodidacta y mantengo una curiosidad constante por la tecnología y la ciberseguridad.</p><div class="profile-education"><span class="profile-education-mark" aria-hidden="true">↗</span><div><p class="education-label">FORMACIÓN · COLEGIO RETAMAR</p><p>FP en Sistemas Microinformáticos y Redes y en Desarrollo de Aplicaciones Multiplataforma, en Pozuelo de Alarcón. <strong>Media de 10 y matrícula de honor en ambos grados.</strong></p></div></div><a class="arrow-link" href="#formacion">Explorar mi formación <span>↓</span></a></div>
+  </div></section>
+  <section class="expertise section-pad wrap" id="services"><div class="section-heading"><div><p class="eyebrow section-label">02 / LO QUE HAGO</p><h2>Una visión completa<br><em>de la tecnología.</em></h2></div><p>De la infraestructura a la interfaz, con atención a las personas que la utilizan.</p></div><div class="expertise-grid">
+    <article class="expertise-card"><div class="card-top"><span>01 / SISTEMAS</span><span class="card-symbol">⌘</span></div><h3>Infraestructura<br>y sistemas</h3><p>Administración de entornos Windows, Linux y macOS, redes y servicios que mantienen el trabajo en marcha.</p><div class="card-tags">LINUX <span>·</span> AZURE <span>·</span> DOCKER</div><a href="#sistemas" aria-label="Conocer más sobre sistemas">Explorar <span>↗</span></a></article>
+    <article class="expertise-card"><div class="card-top"><span>02 / DESARROLLO</span><span class="card-symbol">⌁</span></div><h3>Desarrollo<br>full stack</h3><p>Aplicaciones, APIs, bases de datos y experiencias web y móviles, desde la idea hasta una solución funcional.</p><div class="card-tags">ANGULAR <span>·</span> PHP <span>·</span> PYTHON</div><a href="#desarrollo" aria-label="Conocer más sobre desarrollo full stack">Explorar <span>↗</span></a></article>
+    <article class="expertise-card"><div class="card-top"><span>03 / PERSONAS</span><span class="card-symbol">✳</span></div><h3>Soporte<br>IT</h3><p>Diagnóstico, resolución de incidencias y acompañamiento técnico para equipos y usuarios.</p><div class="card-tags">HELPDESK <span>·</span> GOOGLE WORKSPACE</div><a href="#portfolio">Ver experiencia <span>↗</span></a></article>
+  </div></section>
+<section class="detail-band landing-skills" id="sistemas"><div class="wrap detail-section"><div class="section-heading"><div><p class="eyebrow section-label">SISTEMAS / EN DETALLE</p><h2>La tecnología,<br><em>desde dentro.</em></h2></div><p>Infraestructura, redes y servicios con atención a las personas que los utilizan.</p></div><div class="detail-cards"><article><span>01 / CONECTIVIDAD</span><h3>Redes</h3><p>Administración de redes profesionales, firewalls Fortinet, switches Cisco, WiFi UniFi y segmentación mediante VLAN.</p></article><article><span>02 / ENTORNOS</span><h3>Sistemas</h3><p>Administración y resolución de incidencias de hardware y software en Windows, macOS, Linux y ChromeOS.</p></article><article><span>03 / INFRAESTRUCTURA</span><h3>Servidores</h3><p>Despliegue y mantenimiento de máquinas virtuales en entornos VMware ESXi.</p></article><article><span>04 / SERVICIOS</span><h3>Identidad y correo</h3><p>Gestión de cuentas, dominios y correo con Google Workspace, Microsoft Azure y Zimbra.</p></article></div></div></section><section class="wrap detail-section" id="desarrollo"><div class="section-heading"><div><p class="eyebrow section-label">DESARROLLO / FULL STACK</p><h2>Del dato<br><em>a la experiencia.</em></h2></div><p>Aplicaciones web y móviles, desde la lógica de negocio y los datos hasta la interfaz.</p></div><div class="detail-cards"><article><span>01 / BACKEND</span><h3>APIs y lógica de negocio</h3><p>Desarrollo de APIs y aplicaciones con PHP, Python y JavaScript, utilizando frameworks como Laravel cuando el proyecto lo requiere.</p></article><article><span>02 / DATOS</span><h3>Bases de datos</h3><p>Trabajo con bases de datos y MySQL para almacenar y gestionar la información que necesitan las aplicaciones.</p></article><article><span>03 / APLICACIONES</span><h3>Web y móvil</h3><p>Desarrollo de aplicaciones con Angular y PHPRunner, además de aplicaciones móviles con Android nativo y Flutter.</p></article><article><span>04 / SITIOS WEB</span><h3>Presencia digital</h3><p>Diseño y creación de páginas web para clientes, con HTML, CSS y JavaScript y herramientas como WordPress, Joomla y Odoo.</p></article></div></section>
+  <section class="experience section-pad" id="portfolio"><div class="wrap"><div class="section-heading"><div><p class="eyebrow section-label">03 / TRAYECTORIA</p><h2>Experiencia que<br><em>se pone en práctica.</em></h2></div><p>Infraestructura, desarrollo y soporte en entornos reales.</p></div>
+  <div class="career-timeline">
+    <article class="career-entry career-current"><div class="career-date"><span>NOV 2023 — ACTUALIDAD</span><span class="career-badge">PUESTO ACTUAL</span></div><div class="career-content"><div class="career-title"><div><h3>Administrador de sistemas &amp; desarrollador full stack</h3><p class="career-company">Turboiber Elevación <span>·</span> San Martín de la Vega, Madrid</p></div><a href="https://turboiber.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Turboiber (abre en una nueva pestaña)">↗</a></div><p>Combino la gestión de infraestructura y el soporte con el desarrollo de herramientas para el negocio.</p><ul><li>Administración de dominios Windows, servidores VMware ESXi, copias de seguridad y redes con Fortinet y UniFi.</li><li>Gestión de correo electrónico en Microsoft 365 y otros proveedores.</li><li>Desarrollo de aplicaciones internas y APIs con Angular, PHP y Python, además de aplicaciones móviles con Android nativo y Flutter.</li><li>Automatización con PowerShell, Python y Bash, y gestión de dispositivos con Samsung Knox.</li></ul><div class="career-tags"><span>WINDOWS SERVER</span><span>VMWARE</span><span>MICROSOFT 365</span><span>ANGULAR</span><span>PHP</span><span>PYTHON</span><span>ANDROID</span></div></div></article>
+    <article class="career-entry"><div class="career-date"><span>JUL 2023 — SEP 2023</span></div><div class="career-content"><div class="career-title"><div><h3>Administrador de sistemas cloud</h3><p class="career-company">Keykumo <span>·</span> Madrid</p></div><a href="https://keykumo.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Keykumo (abre en una nueva pestaña)">↗</a></div><p>Administración de servicios cloud y soporte de infraestructura corporativa.</p><ul><li>Gestión de Microsoft Azure y Microsoft 365, incluyendo identidad, seguridad y correo.</li><li>Mantenimiento de copias de seguridad, redes, firewalls y virtualización.</li></ul><div class="career-tags"><span>AZURE</span><span>MICROSOFT 365</span><span>FORTINET</span><span>CISCO</span></div></div></article>
+    <article class="career-entry"><div class="career-date"><span>SEP 2022 — JUN 2023</span></div><div class="career-content"><div class="career-title"><div><h3>Técnico informático</h3><p class="career-company">Colegio Orvalle <span>·</span> Las Rozas, Madrid</p></div><a href="https://www.orvalle.es/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Colegio Orvalle (abre en una nueva pestaña)">↗</a></div><p>Soporte y administración de sistemas en un entorno educativo.</p><ul><li>Gestión de Google Workspace, Chromebooks y dominios Windows Server.</li><li>Mantenimiento de equipos, atención de incidencias y gestión de redes.</li></ul><div class="career-tags"><span>GOOGLE WORKSPACE</span><span>CHROMEBOOKS</span><span>REDES</span></div></div></article>
+    <article class="career-entry"><div class="career-date"><span>OTRA EXPERIENCIA</span></div><div class="career-content"><div class="career-title"><div><h3>Consultoría y soporte IT</h3><p class="career-company">Imasteq</p></div><a href="https://intranet.imasteq.com/public/ticket/index.php" target="_blank" rel="noopener noreferrer" aria-label="Visitar Imasteq (abre en una nueva pestaña)">↗</a></div><p>Soporte técnico y resolución de incidencias para empresas de distintos sectores.</p><div class="career-tags"><span>HELPDESK</span><span>CONSULTORÍA</span></div></div></article>
+  </div><div class="career-projects"><p>También he diseñado y desarrollado proyectos web para clientes de diferentes sectores.</p><a class="arrow-link" href="#projects">Ver proyectos web <span>↓</span></a></div></div></section>
+<section class="wrap detail-section" id="projects" aria-labelledby="projects-title"><div class="section-heading"><div><p class="eyebrow section-label">04 / PROYECTOS WEB</p><h2 id="projects-title">Proyectos<br><em>en la web.</em></h2></div><p>Una selección de sitios creados para clientes y equipos de distintos sectores.</p></div><div class="web-projects">
+<a href="https://tienda.turboiber.com/" target="_blank" rel="noopener noreferrer"><span class="web-project-number">01</span><div><h3>Tienda Turboiber</h3><p>Productos y servicios de elevación y seguridad.</p></div><span class="web-project-sector">INDUSTRIA</span><span class="web-project-arrow" aria-hidden="true">↗</span><span class="sr-only"> (abre en una nueva pestaña)</span></a>
+<a href="https://lauraalvarofisioterapia.com/" target="_blank" rel="noopener noreferrer"><span class="web-project-number">02</span><div><h3>Fisiosphere by Laura Álvaro</h3><p>Fisioterapia, tratamientos y bienestar.</p></div><span class="web-project-sector">SALUD</span><span class="web-project-arrow" aria-hidden="true">↗</span><span class="sr-only"> (abre en una nueva pestaña)</span></a>
+<a href="https://dmoarquitectos.com" target="_blank" rel="noopener noreferrer"><span class="web-project-number">03</span><div><h3>DMO Arquitectos</h3><p>Estudio de arquitectura.</p></div><span class="web-project-sector">ARQUITECTURA</span><span class="web-project-arrow" aria-hidden="true">↗</span><span class="sr-only"> (abre en una nueva pestaña)</span></a>
+<a href="https://8agsl.com" target="_blank" rel="noopener noreferrer"><span class="web-project-number">04</span><div><h3>8AG Construcción</h3><p>Empresa de construcción.</p></div><span class="web-project-sector">CONSTRUCCIÓN</span><span class="web-project-arrow" aria-hidden="true">↗</span><span class="sr-only"> (abre en una nueva pestaña)</span></a>
+<a href="https://ligadeportivafp.com" target="_blank" rel="noopener noreferrer"><span class="web-project-number">05</span><div><h3>Liga Deportiva FP</h3><p>Competición deportiva de formación profesional.</p></div><span class="web-project-sector">DEPORTE</span><span class="web-project-arrow" aria-hidden="true">↗</span><span class="sr-only"> (abre en una nueva pestaña)</span></a>
+<a href="https://nostrumcorp.com" target="_blank" rel="noopener noreferrer"><span class="web-project-number">06</span><div><h3>Nostrumcorp</h3><p>Interim management.</p></div><span class="web-project-sector">EMPRESA</span><span class="web-project-arrow" aria-hidden="true">↗</span><span class="sr-only"> (abre en una nueva pestaña)</span></a>
+</div><p class="project-note">Algunos de estos sitios ya no los gestiono ni mantengo; su contenido y diseño pueden haber cambiado desde mi participación.</p></section>
+<section class="detail-band" id="formacion"><div class="wrap detail-section"><div class="section-heading"><div><p class="eyebrow section-label">05 / FORMACIÓN CONTINUA</p><h2>Siempre hay algo<br><em>nuevo que explorar.</em></h2></div><p>Además de mi formación en Retamar, sigo aprendiendo de forma autodidacta.</p></div><details class="training-details"><summary>Ver cursos y formación complementaria <span aria-hidden="true">↓</span></summary><div class="detail-list"><a href="https://www.udemy.com/course/comandos-terminal-bash-linux-y-programar-shell-script/"><span>01</span><div><h3>Linux y Shell Script</h3><p>Terminal, comandos y automatización.</p></div><b>↗</b></a><a href="https://www.udemy.com/course/certificacion-lpic1-administrador-linux-examen-101/"><span>02</span><div><h3>Administración Linux · LPIC-1</h3><p>Preparación para el examen 101 de administración de sistemas Linux.</p></div><b>↗</b></a><a href="https://www.udemy.com/course/python-total/"><span>03</span><div><h3>Python</h3><p>Programación y proyectos prácticos.</p></div><b>↗</b></a><a href="https://www.udemy.com/course/desarrollo-web-completo-con-html5-css3-js-php-y-mysql/"><span>04</span><div><h3>Desarrollo web completo</h3><p>HTML, CSS, JavaScript, PHP y MySQL.</p></div><b>↗</b></a><a href="https://www.udemy.com/course/master-en-docker-y-devops-de-principiante-a-experto/"><span>05</span><div><h3>Docker y DevOps</h3><p>Contenedores, despliegue y herramientas DevOps.</p></div><b>↗</b></a></div></details></div></section>
+  <section class="contact section-pad" id="contact"><div class="wrap contact-inner"><p class="eyebrow">06 / SIGUIENTE PASO</p><h2>¿Hacemos que<br><em>las cosas funcionen?</em></h2><div class="contact-bottom"><p>Si buscas a alguien que conecte tecnología, soluciones y personas, hablemos.</p><a class="button button-dark" href="mailto:gonzalovictoriaortiz@gmail.com">Escríbeme <span>↗</span></a></div></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><a class="footer-brand" href="#home">gv<span>.</span></a><p>© <span id="year">2026</span> Gonzalo Victoria<br>Hecho con curiosidad.</p><div class="footer-links"><a href="https://www.linkedin.com/in/gonzalo-victoria-de-lecea-ort%C3%ADz-778355219/">LinkedIn ↗</a><a href="https://github.com/R1NLER">GitHub ↗</a><a href="mailto:gonzalovictoriaortiz@gmail.com">Email ↗</a></div><a class="back-top" href="#home">Volver arriba ↑</a></div></footer>
+</body>
 </html>
