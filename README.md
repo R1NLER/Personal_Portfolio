@@ -37,7 +37,7 @@ Después, abre `http://localhost:8000` en el navegador. Para detener el servidor
 │   ├── home.js                 # Navegación e interacciones
 │   └── i18n.js                 # Traducciones y selector de idioma
 └── media/
-    ├── docs/CV-GV2026_WEB.pdf  # Currículum descargable
+    ├── docs/CV-2026-v2.pdf  # Currículum descargable
     └── images/                 # Retrato e icono SVG
 ```
 
